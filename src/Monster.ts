@@ -20,12 +20,6 @@ class Monster implements SimpleFighter {
     return this._lifePoints;
   }
 
-  receiveAttack(attackPoints: number): number {
-    const life1 = this._lifePoints - attackPoints;
-    this._lifePoints = Math.max(life1, -1);
-    return this._lifePoints;
-  }
-
   attack(enemy: SimpleFighter): void {
     enemy.receiveDamage(this._strength);
   }
